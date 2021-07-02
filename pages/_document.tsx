@@ -40,12 +40,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="utf-8" />
-
-          <link
-            href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins&display=swap"
-            rel="stylesheet"
-          />
+          <meta charSet="UTF-8" />
 
           <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
         </Head>

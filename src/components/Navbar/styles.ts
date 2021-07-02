@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { FaMagento } from 'react-icons/fa';
 
@@ -14,6 +14,9 @@ export const NavbarContainer = styled.nav`
   font-size: 1.6rem;
 
   z-index: 1;
+
+  position: fixed;
+  width: 100%;
 `;
 
 export const NavbarContent = styled.div`
@@ -62,7 +65,7 @@ export const NavbarMenuText = styled.span`
   }
 
   @media screen and (max-width: 960px) {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -89,6 +92,7 @@ interface NavbarMenuProps {
 export const NavbarMenu = styled.ul<NavbarMenuProps>`
   display: flex;
   list-style: none;
+  z-index: 1;
 
   @media screen and (max-width: 960px) {
     flex-direction: column;
@@ -104,6 +108,8 @@ export const NavbarMenu = styled.ul<NavbarMenuProps>`
     background: ${(props) => props.theme.colors.navbarBackground};
 
     border-top: 1px solid red;
+
+    padding: 20px;
   }
 `;
 
@@ -111,6 +117,7 @@ export const NavbarItem = styled.li`
   height: 50px;
 
   border-bottom: 2px solid transparent;
+  margin-bottom: 10px;
 
   &:hover {
     border-bottom: 2px solid #4b59f7;
@@ -136,10 +143,11 @@ export const NavbarLinks = styled.a`
 
   @media screen and (max-width: 960px) {
     text-align: center;
-    padding: 2rem;
+    //padding: 2rem;
     width: 100%;
     display: table;
-    padding: 3px;
+    padding-top: 23px;
+    padding-bottom: 0px;
     height: 0;
 
     &:hover {
@@ -155,6 +163,7 @@ export const NavbarItemBtn = styled.li`
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 0px ;
   }
 `;
 
@@ -184,5 +193,25 @@ export const SignUpBtn = styled.button`
     width: 30%;
     margin-top: 5px;
     font-size: 1.2rem;
+  }
+`;
+
+interface ToastTypeProps {
+  toastType: string;
+}
+
+export const ToastMessage = styled.h3<ToastTypeProps>`
+  margin-left: 10px;
+  color: black;
+
+  &:hover {
+    ${(props) =>
+    (props.toastType === 'success'
+      ? css`
+            color: lightgreen;
+          `
+      : css`
+            color: lightpink;
+          `)}
   }
 `;

@@ -1,9 +1,13 @@
 type RoutesType = {
-  login: string;
-  dashboard: string;
+  signin: string;
+  signup: string;
+  home: string;
+  user: string;
 };
 
 export const routes: RoutesType = {
-  login: '/login',
-  dashboard: '/dashboard',
+  signin: '/signin',
+  signup: '/signup',
+  home: '/',
+  user: '/user',
 };

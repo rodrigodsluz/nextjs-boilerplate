@@ -1,2 +1,10 @@
 export { default as Navbar } from './Navbar';
 export { default as MainLayout } from './MainLayout';
+export { default as FormInput } from './FormInput';
+export { default as TextAreaInput } from './TextAreaInput';
+export { default as Footer } from './Footer';
+export { default as Modal } from './Modal';
+export { default as PrivateAdmin } from './PrivateAdmin';
+export { default as PrivateUser } from './PrivateUser';
+export { default as DisqusThread } from './DisqusThread';
+export { default as GoogleLogin } from './GoogleLogin';
