@@ -2,7 +2,7 @@
 
 import 'styled-components';
 
-import theme from './theme';
+import theme from './Theme';
 
 export type Theme = typeof theme;
 

@@ -8,7 +8,23 @@ import Document, {
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-export default class MyDocument extends Document {
+const language = 'pt-br';
+
+type Props = {
+  styleTags: string;
+};
+
+/**
+ * @export
+ * @component
+ * @name ApplicationDocument
+ *
+ * @description
+ * Responsible to have all settings.
+ * Allows us to override the default page layout and inject our own styles and markup.
+ * Only rendered on the server side.
+ */
+export default class ApplicationDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext,
   ): Promise<DocumentInitialProps> {

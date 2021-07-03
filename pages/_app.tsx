@@ -1,14 +1,16 @@
 import { AppProps } from 'next/app';
-
 import { ThemeProvider } from 'styled-components';
-import GlobalStyle from '../src/styles/global';
-import theme from '../src/styles/theme';
+import { RecoilRoot } from 'recoil';
+import GlobalStyle from '../src/styles/Global';
+import Theme from '../src/styles/Theme';
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => (
-  <ThemeProvider theme={theme}>
-    <Component {...pageProps} />
-    <GlobalStyle />
+const Application = ({ Component, pageProps }: AppProps): JSX.Element => (
+  <ThemeProvider theme={Theme}>
+    <RecoilRoot>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </RecoilRoot>
   </ThemeProvider>
 );
 
-export default MyApp;
+export default Application;
