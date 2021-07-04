@@ -24,7 +24,7 @@ type Props = {
  * Allows us to override the default page layout and inject our own styles and markup.
  * Only rendered on the server side.
  */
-export default class ApplicationDocument extends Document {
+export default class ApplicationDocument extends Document<Props> {
   static async getInitialProps(
     ctx: DocumentContext,
   ): Promise<DocumentInitialProps> {
@@ -38,6 +38,7 @@ export default class ApplicationDocument extends Document {
         });
 
       const initialProps = await Document.getInitialProps(ctx);
+
       return {
         ...initialProps,
         styles: (
@@ -54,11 +55,15 @@ export default class ApplicationDocument extends Document {
 
   render(): JSX.Element {
     return (
-      <Html lang="en">
+      <Html lang={language}>
         <Head>
           <meta charSet="UTF-8" />
-
-          <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
+          <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+          <link
+            rel="icon"
+            type="image/x-icon"
+            href="/favicons/favicon-d1.png"
+          />
         </Head>
         <body>
           <Main />

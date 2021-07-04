@@ -1,9 +1,17 @@
 import HomeScreen from '@screens/Home';
 
-const Home: React.FC = () => (
+/**
+ * @export
+ * @component
+ * @name Index
+ *
+ * @description
+ * Landing page
+ */
+const Index = (): JSX.Element => (
   <>
     <HomeScreen/>
   </>
 );
 
-export default Home;
+export default Index;
