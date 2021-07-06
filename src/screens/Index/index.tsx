@@ -4,11 +4,11 @@ import { HomeTitleContainer } from './styles';
 /**
  * @export
  * @component
- * @name HomeScreen
+ * @name IndexScreen
  *
  * @description
- * Home screen
+ * Index screen
  */
-const HomeScreen = (): JSX.Element => <>Hello World</>;
+const IndexScreen = (): JSX.Element => <>Hello World</>;
 
-export default HomeScreen;
+export default IndexScreen;

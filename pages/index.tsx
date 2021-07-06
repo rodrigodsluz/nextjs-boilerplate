@@ -1,4 +1,4 @@
-import HomeScreen from '@screens/Home';
+import IndexScreen from '@screens/Index';
 
 /**
  * @export
@@ -6,11 +6,11 @@ import HomeScreen from '@screens/Home';
  * @name Index
  *
  * @description
- * Landing page
+ * Index page
  */
-const Index = (): JSX.Element => (
+ const Index = (): JSX.Element => (
   <>
-    <HomeScreen/>
+    <IndexScreen/>
   </>
 );
 
