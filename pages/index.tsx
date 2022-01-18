@@ -1,17 +1,13 @@
-import IndexScreen from '@screens/Index';
+import HomeScreen from '@screens/Home';
 
 /**
  * @export
  * @component
- * @name Index
+ * @name Home
  *
  * @description
- * Index page
+ * Home page
  */
- const Index = (): JSX.Element => (
-  <>
-    <IndexScreen/>
-  </>
-);
+const Home = (): JSX.Element => <HomeScreen />;
 
-export default Index;
+export default Home;

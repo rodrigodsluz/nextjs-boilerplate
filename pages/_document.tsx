@@ -20,7 +20,7 @@ type Props = {
  * @name ApplicationDocument
  *
  * @description
- * Responsible to have all settings.
+ * Responsible for all settings of project.
  * Allows us to override the default page layout and inject our own styles and markup.
  * Only rendered on the server side.
  */
@@ -34,7 +34,7 @@ export default class ApplicationDocument extends Document<Props> {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);

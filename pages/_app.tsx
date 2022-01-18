@@ -1,15 +1,13 @@
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
-import { RecoilRoot } from 'recoil';
-import GlobalStyle from '../src/styles/Global';
-import Theme from '../src/styles/Theme';
+
+import theme from '../src/styles/theme';
+import GlobalStyle from '../src/styles/GlobalStyle';
 
 const Application = ({ Component, pageProps }: AppProps): JSX.Element => (
-  <ThemeProvider theme={Theme}>
-    <RecoilRoot>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </RecoilRoot>
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <Component {...pageProps} />
   </ThemeProvider>
 );
 
