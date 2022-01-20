@@ -9,7 +9,10 @@
     "airbnb",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
-    "prettier/react"
+    "prettier/react",
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -19,8 +22,46 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "import",
+    "eslint-plugin-import-helpers"
+  ],
+  "globals": {
+    "JSX": true,
+    "React": true
+  },
   "rules": {
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "import/no-duplicates": [
+      "error",
+      {
+        "considerQueryString": true
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          ["/^react/"],
+          ["module"],
+          ["/^~//"],
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ],
     "prettier/prettier": "off",
     "space-before-function-paren": "off",
     "react/prop-types": "off",

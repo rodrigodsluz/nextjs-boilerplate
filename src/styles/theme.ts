@@ -1,5 +1,13 @@
+import breakpoints from './breakpoints';
+
 export default {
   colors: {
+    white: '#FFFFFF',
+    blue: '#0000ff',
+    darkGrey: '#282828',
+    lightGrey: '#dddddd',
+    lightGreen: '#d4fdeb',
+    primaryColor: '#74dfaf',
     xLightSuccess: '#d7f5e8',
     lightSuccess: '#43cc8b',
     success: '#6AE058',
@@ -8,13 +16,10 @@ export default {
     lightWarning: '#d28488',
     warning: '#E09B35',
     error: '#E33F36',
-    white: '#FFFFFF',
     black: '#000000',
     xlightBlue: '#deeafb',
     lightBlue: '#91b8e5',
-    lightGrey: '#d3d6e0',
     grey: '#B4B6BF',
-    darkGrey: '#7A7C82',
     minWhite: '#F7F7F5',
   },
   fonts: {
@@ -23,6 +28,8 @@ export default {
       secundary: "'Montserrat', sans-serif",
     },
     weight: {
+      ultraThin: 100,
+      thin: 200,
       light: 300,
       normal: 400,
       medium: 500,
@@ -59,4 +66,5 @@ export default {
       quick: '0.1s ease-in-out',
     },
   },
+  breakpoints,
 } as const;

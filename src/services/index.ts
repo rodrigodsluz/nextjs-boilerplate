@@ -1,10 +1,15 @@
 import auth from './auth';
-import category from './category';
-import tag from './tag';
 import blog from './blog';
-import user from './user';
+import category from './category';
 import form from './form';
+import tag from './tag';
+import user from './user';
 
 export default {
-  auth, category, tag, blog, user, form,
+  auth,
+  category,
+  tag,
+  blog,
+  user,
+  form,
 };

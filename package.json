@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "echo \"Starting the project, wait a moment :)\n\" && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "echo \"Checking if you screwed up in the code pattern\"\"\nVerificando se vc fez merda no padrão do código\n\" && eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -29,6 +29,7 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import-helpers": "^1.2.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.21.5",

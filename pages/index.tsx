@@ -3,11 +3,11 @@ import HomeScreen from '@screens/Home';
 /**
  * @export
  * @component
- * @name Home
+ * @name HomePage
  *
  * @description
  * Home page
  */
-const Home = (): JSX.Element => <HomeScreen />;
+const HomePage = (): JSX.Element => <HomeScreen />;
 
-export default Home;
+export default HomePage;
